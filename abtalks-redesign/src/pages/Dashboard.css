@@ -1,0 +1,738 @@
+/* 
+  ABTalks Premium Redesign Dashboard CSS
+  Midnight Focus Theme
+*/
+
+.dashboard-page {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  padding: 0 16px 80px 16px;
+  width: 100%;
+  position: relative;
+}
+
+.dashboard-main-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.dashboard-left-col,
+.dashboard-right-col {
+  min-width: 0;
+}
+
+.metric-mini-card,
+.sidebar-profile-card,
+.recent-days-section,
+.active-challenge-card,
+.welcome-banner {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.metric-mini-card:hover,
+.sidebar-profile-card:hover,
+.active-challenge-card:hover {
+  border-color: var(--border-hover);
+}
+
+.dashboard-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--nav-height);
+  background: rgba(5,5,8,0.78);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+}
+
+.dashboard-navbar.scrolled {
+  background: rgba(5,5,8,0.92);
+}
+
+.nav-logo-link,
+.nav-item,
+.nav-logo-link span,
+.student-proof-name,
+.student-proof-college {
+  line-height: 1;
+}
+
+.nav-logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.user-nav-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px 8px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: rgba(255,255,255,0.02);
+}
+
+.user-nav-avatar,
+.sidebar-avatar-large {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--accent-gradient);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  box-shadow: 0 10px 24px rgba(99, 102, 241, 0.25);
+}
+
+.user-nav-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.student-proof-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.student-proof-college {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.bg-glow {
+  position: absolute;
+  filter: blur(110px);
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.bg-glow-top {
+  top: 80px;
+  left: 14%;
+  width: 260px;
+  height: 260px;
+  background: rgba(99, 102, 241, 0.18);
+}
+
+.bg-glow-middle {
+  top: 260px;
+  right: 14%;
+  width: 240px;
+  height: 240px;
+  background: rgba(139, 92, 246, 0.18);
+}
+
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.metric-mini-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 18px;
+}
+
+.metric-icon-box {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  color: var(--accent-indigo);
+}
+
+.metric-content-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.metric-mini-val {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+}
+
+.metric-mini-lbl {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.welcome-banner {
+  padding: 28px;
+}
+
+.welcome-header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.welcome-title-group {
+  min-width: 0;
+}
+
+.welcome-title-group h2 {
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
+  letter-spacing: -0.05em;
+  margin-top: 8px;
+}
+
+.welcome-subtitle {
+  margin-top: 8px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.progress-grid-section {
+  margin-top: 32px;
+  background: rgba(11,12,16,0.74);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.progress-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.progress-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.progress-percent-badge,
+.editor-badge-phase,
+.current-day-label,
+.challenge-phase-label,
+.status-badge,
+.day-number-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+}
+
+.progress-percent-badge {
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.02);
+}
+
+.grid-legend {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+}
+
+.legend-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legend-color.completed {
+  background: var(--success);
+}
+
+.legend-color.current {
+  background: var(--accent-indigo);
+}
+
+.legend-color.locked {
+  background: rgba(255,255,255,0.14);
+}
+
+.grid-60-scroll-container {
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.progress-grid-60 {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(38px, 1fr));
+  gap: 8px;
+  min-width: 0;
+}
+
+.progress-block {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.progress-block:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-1px);
+}
+
+.progress-block.completed {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.18);
+  color: #d9fbe8;
+}
+
+.progress-block.current {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.28);
+  color: #dfe3ff;
+}
+
+.progress-block.locked {
+  background: rgba(255,255,255,0.02);
+  color: var(--text-muted);
+}
+
+.progress-block-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  transform: translateX(-50%);
+  min-width: 140px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(11,12,16,0.96);
+  border: 1px solid var(--border-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  pointer-events: none;
+}
+
+.progress-block:hover .progress-block-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.roadmap-progress-bar-container {
+  height: 8px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 18px;
+}
+
+.roadmap-progress-bar-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent-indigo) 0%, var(--accent-violet) 100%);
+}
+
+.active-detail-panel {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: rgba(99, 102, 241, 0.04);
+}
+
+.active-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.active-detail-close {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.02);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.active-detail-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.active-detail-desc {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.active-detail-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.active-challenge-card {
+  margin-top: 32px;
+}
+
+.challenge-card-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.current-day-label {
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.02);
+}
+
+.challenge-phase-label {
+  color: var(--accent-indigo);
+  background: rgba(99,102,241,0.08);
+  border-color: rgba(99,102,241,0.14);
+}
+
+.challenge-title {
+  font-size: 1.6rem;
+  letter-spacing: -0.04em;
+  margin-bottom: 10px;
+}
+
+.challenge-desc {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.checklist-container {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checklist-header {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: rgba(255,255,255,0.02);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.checklist-item.checked {
+  background: rgba(16, 185, 129, 0.06);
+  border-color: rgba(16, 185, 129, 0.18);
+}
+
+.checklist-checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border-color);
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+.checklist-item-text {
+  line-height: 1.5;
+}
+
+.challenge-action-flex {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-continue-challenge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--accent-gradient);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.08);
+  font-weight: 700;
+}
+
+.challenge-status-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
+
+.sidebar-profile-card {
+  padding: 24px 20px;
+}
+
+.sidebar-profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.sidebar-avatar-large {
+  width: 56px;
+  height: 56px;
+}
+
+.sidebar-name {
+  font-size: 1.3rem;
+  letter-spacing: -0.04em;
+}
+
+.sidebar-college {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.profile-cohort-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(99,102,241,0.08);
+  border: 1px solid rgba(99,102,241,0.14);
+  color: var(--text-primary);
+  font-size: 0.72rem;
+}
+
+.sidebar-repo-box {
+  margin-top: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 14px;
+  background: rgba(255,255,255,0.02);
+}
+
+.sidebar-repo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: var(--font-mono);
+}
+
+.sidebar-repo-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  max-width: 100%;
+  color: var(--text-primary);
+  font-size: 0.82rem;
+}
+
+.recent-days-section {
+  margin-top: 32px;
+}
+
+.recent-days-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recent-day-row-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: rgba(255,255,255,0.02);
+}
+
+.recent-day-meta-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.recent-day-circle-num {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(99,102,241,0.12);
+  border: 1px solid rgba(99,102,241,0.18);
+  color: var(--text-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.recent-day-text-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.recent-day-task-title {
+  color: var(--text-primary);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.recent-day-subtext {
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+}
+
+.recent-day-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.proof-icon-btn {
+  width: 28px;
+  height: 28px;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .dashboard-navbar {
+    padding: 0;
+  }
+
+  .user-nav-profile {
+    display: none;
+  }
+
+  .welcome-header-flex,
+  .challenge-action-flex,
+  .active-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .progress-grid-60 {
+    grid-template-columns: repeat(5, minmax(36px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-grid-60 {
+    grid-template-columns: repeat(4, minmax(36px, 1fr));
+  }
+
+  .metric-mini-card,
+  .welcome-banner,
+  .progress-grid-section,
+  .active-challenge-card,
+  .sidebar-profile-card,
+  .recent-days-section {
+    padding: 18px 16px;
+  }
+}
