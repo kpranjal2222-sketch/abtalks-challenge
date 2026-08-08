@@ -1,75 +1,58 @@
-# React + TypeScript + Vite
+# ABTalks — 60-Day Coding Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Build. Track. Prove.**
 
-Currently, two official plugins are available:
+ABTalks is a 60-day interactive coding challenge platform designed to help developers build consistently, track their progress, and prove their work through daily coding challenges and Proof of Work.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🗓️ **60-Day Challenge** — Follow a structured daily coding journey.
+- 📊 **Progress Dashboard** — Track completion, progress, and challenge status.
+- 🔥 **Streak Tracking** — Stay consistent throughout the challenge.
+- 💻 **Daily Challenges** — Work through individual day-based coding milestones.
+- ⏱️ **Focus Timer** — Stay focused while working on the daily challenge.
+- ✅ **Deliverables Tracking** — Track the tasks required for each challenge.
+- 🧾 **Proof of Work** — Submit evidence of completed work.
+- 👤 **Profile & Registration** — Manage participation and profile information.
+- 🔄 **Day Navigation** — Move between previous and upcoming challenges.
+- 📱 **Responsive UI** — Designed to work across desktop, tablet, and mobile screens.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🖥️ Pages
 
-## Expanding the ESLint configuration
+### Landing Page
+Introduces the ABTalks 60-day challenge, its workflow, challenge philosophy, and main call-to-action.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Dashboard
+Provides an overview of the user's challenge progress, streak, roadmap, active challenge, profile information, and Proof of Work activity.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Day / Challenge Page
+Provides the individual daily challenge, deliverables, progress state, timer/context information, Proof of Work, and day-to-day navigation.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🎨 Design
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+ABTalks uses a **Midnight Focus** visual system built around:
 
-```
+- Dark layered backgrounds
+- Indigo and violet accents
+- Subtle borders and glow effects
+- Rounded cards
+- Clear typography hierarchy
+- Developer-focused visual language
+- Responsive layouts
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The same visual identity is maintained across desktop and mobile.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- React
+- TypeScript
+- Vite
+- CSS
+- React Router
 
-```
+## 🚀 Getting Started
+
+Clone the repository and install dependencies:
+
+```bash
+npm install
