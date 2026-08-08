@@ -59,7 +59,7 @@ export default function Dashboard() {
   const [tempProfile, setTempProfile] = useState<UserProfile>({ 
     name: "Pranjal Kumar", 
     college: "SR University", 
-    githubUrl: "https://github.com/pranjalkumar" 
+    githubUrl: "https://github.com/kpranjal2222-sketch" 
   });
 
   // Load profile on mount
